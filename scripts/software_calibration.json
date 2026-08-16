@@ -1,0 +1,49 @@
+{
+  "schema_version": 1,
+  "environment": {
+    "os": "darwin",
+    "architecture": "arm64",
+    "cpu": "Apple M5 Pro",
+    "go": "go1.26.6",
+    "lattigo": "v6.2.0"
+  },
+  "command": "go test -run '^$' -bench BenchmarkSparseEProtocol -benchtime=5x -count=3 ./benchmarks",
+  "fhe_parameters": {
+    "rlwe_dimension": 4096,
+    "rlwe_modulus_bits": 64,
+    "rgsw_modulus_bits": 125,
+    "rgsw_special_prime_bits": 61,
+    "rgsw_decomposition_digits": 2
+  },
+  "external_products_per_hswitch": 1,
+  "samples": [
+    {
+      "name": "gnn_adjacency_aggregation",
+      "effective_nnz": 13,
+      "selector_count": 56,
+      "row_ciphertexts": 1,
+      "elapsed_samples_s": [0.027125108, 0.026951708, 0.027260617]
+    },
+    {
+      "name": "llm_one_hot_embedding",
+      "effective_nnz": 7,
+      "selector_count": 20,
+      "row_ciphertexts": 1,
+      "elapsed_samples_s": [0.010572367, 0.010530200, 0.010568442]
+    },
+    {
+      "name": "three_d_cnn_voxel_occupancy",
+      "effective_nnz": 12,
+      "selector_count": 56,
+      "row_ciphertexts": 1,
+      "elapsed_samples_s": [0.026762200, 0.026726250, 0.026803225]
+    },
+    {
+      "name": "recsys_user_item_interactions",
+      "effective_nnz": 11,
+      "selector_count": 56,
+      "row_ciphertexts": 1,
+      "elapsed_samples_s": [0.026501983, 0.026422550, 0.026336558]
+    }
+  ]
+}

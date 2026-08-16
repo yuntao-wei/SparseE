@@ -1,0 +1,21 @@
+# Repository-local files
+/AGENTS.md
+/docs/
+/overleaf/
+
+# Python bytecode
+__pycache__/
+*.py[cod]
+
+# Local environment and credentials
+.env
+.env.*
+!.env.example
+*.key
+*.pem
+*.p12
+
+# Editor and OS metadata
+.DS_Store
+.idea/
+.vscode/
